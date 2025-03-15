@@ -1,0 +1,54 @@
+1. Write a password guessing program to keep track of how many times the user has entered the password wrong. If it is more than 3 times, print "You have been denied access." and terminate the program. If the password is correct, print "You have successfully logged in." and terminate the program. 
+correct_password = "pass@123"
+count = 0
+while count < 3:
+    # Input the password from the user
+    entered_password = input("Enter the password: ")
+    
+    # Check if the entered password is correct
+    if entered_password == correct_password:
+        print("You have successfully logged in.")
+        break
+    else:
+        count += 1
+        print(f"Incorrect password. You have {3 - count} attempts left.")
+        
+# If the user failed to enter the correct password 3 times
+if count == 3:
+    print("You have been denied access.")
+
+
+ 2. Write a program that asks for two numbers. If the sum of the numbers is greater than 100, print "That is a big number" and terminate the program. 
+num1 = int(input("Enter 1st number: "))
+num2 = int(input("Enter 2nd number: "))
+sum = num1 + num2
+
+if(sum>100):
+    print(f"{sum} is a big number.")
+else:
+    print(sum)
+
+
+3. Write a program to check whether the given string is palindrome or not? 
+string = input("Enter a string: ")
+if string == string[::-1]:
+    print("The string is palindrome.")
+else:
+    print("The string is not a palindrome.")
+
+
+4. Write a program to Calculate the BMI of a person? 
+weight = float(input("Enter your weight in kilogram: "))
+height = float(input("Enter you height in meters: "))
+   #calculate BMI
+bmi = weight /(height ** 2)
+print(f"Your BMI is: {bmi}")    
+
+
+5.Program to print a Fibonacci Series.
+num = int(input("Enter a number of terms: "))
+a = 0
+b = 1
+for m in range(num):
+    print(a, end =" ")
+    a, b = b, a+b
