@@ -1,0 +1,38 @@
+1. Print all numbers between 1 to 1000 which are divisible by 9 and must not be divisible by 3.
+for num in range(1,1000):
+    if(num % 9 == 0 and num % 3 != 0):
+        print(num)
+print( "successfully run")
+
+
+2. Calculate the square of a given number.
+a = int(input("Enter a number: "))
+square = a ** 2
+print(str(square) + " is a square of a number.")
+
+
+3. Python program to check whether the given number is a prime number or not.
+num = int(input("Enter a number: "))
+if(num<=1):
+    print(str(num)+" is not a prime number")
+else:
+    for n in range(2,num):
+        if(num % n == 0):
+            print(f"{num} is not prime number")
+            break
+    else:
+            print(f"{num} is a prime number")
+
+
+4. Python program to convert temperature from Celsius to Fahrenheit.
+temp_in_celcius = float(input("Enter temperature in celcius: "))
+fahrenheit = (9/5 * temp_in_celcius) + 32
+print(f"temperature in fahrenheit: {fahrenheit}°F")
+
+
+5. Python program to convert temperature from Fahrenheit to Celsius.
+fahrenheit = float(input("Enter a temperature in fahrenheit: "))
+celcius = 5/9 * (fahrenheit-32)
+print(f"temperature in celcius: {celcius}°C")
+
+
