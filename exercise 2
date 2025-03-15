@@ -1,0 +1,68 @@
+1. Python program to calculate simple interest.
+   #taking input from user
+principal = float(input("Enter the principal amount: "))
+rate = float(input("Enter the rate of interest (per annum): "))
+time = float(input("Enter the time in years: "))
+  #Calculate simple interest
+SI = (principal * rate * time)/100
+print(f"The simple interest is: {SI}")
+
+
+2. Python program to calculate compound interest.
+P = float(input("Enter the principal amount: "))
+R = float(input("Enter the rate of interest (per annum): "))
+T = float(input("Enter the time in years: "))
+    #Calculate the amount (Principal + Compound I nterest)
+A = P * (1 + R/100) ** T
+    #Calculate Compound Interest
+CI = A - P
+print(f"The Compound Interest is: {CI}")
+print(f"The Total amount (Principal + Compound Interest) is: {A}")
+
+
+3. Python program to check the given year is a leap year or not.
+year = int(input("Enter a year: "))
+    #Check if the year is leap year
+if(year % 4 == 0 and year % 100 != 0 ) or (year % 400 == 0):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+
+
+
+4. Take input from a user that is age and check eligibility for voting or not. 
+    #taking age as an input from user
+age = int(input("Enter your age: "))
+if age >=18 :
+    print("You are eligible for voting.")
+else:
+    print("You are not eligible for voting.")
+
+
+5. Design a simple calculator using if – elif – else statements. 
+
+# Get the numbers and operator from the user
+num1 = float(input("Enter the first number: "))
+operator = input("Enter the operator (+, -, *, /): ")
+num2 = float(input("Enter the second number: "))
+
+# Perform the calculation using if-elif-else statements
+if operator == "+":
+    result = num1 + num2
+    print(f"{num1} + {num2} = {result}")
+elif operator == "-":
+    result = num1 - num2
+    print(f"{num1} - {num2} = {result}")
+elif operator == "*":
+    result = num1 * num2
+    print(f"{num1} * {num2} = {result}")
+elif operator == "/":
+    if num2 != 0:  # Check to prevent division by zero
+        result = num1 / num2
+        print(f"{num1} / {num2} = {result}")
+    else:
+        print("Error: Division by zero is not allowed.")
+else:
+    print("Invalid operator. Please use one of the following: +, -, *, /.")
+
+
