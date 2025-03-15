@@ -1,0 +1,56 @@
+1. There are 5280 feet in a mile. Write a Python statement that calculates and prints the number of feet in 13 miles.
+miles = 13
+feet_in_a_mile = 5280
+total_feet_in_13_miles = miles * feet_in_a_mile
+print(total_feet_in_13_miles)
+
+
+2. Write a Python statement that calculates and prints the number of seconds in 7 hours, 21 minutes and 37 seconds. 
+hr = 7
+min = 21
+sec = 37
+total_secs = (hr * 3600) + (min * 60) + sec
+print(total_secs)
+
+
+3. The perimeter of a rectangle is 2w+2h, where w and h are the lengths of its sides. Write a Python statement that calculates and prints the length in inches of the perimeter of a rectangle with sides of length 4 and 7 inches
+w = 4
+h = 7
+perimeter = 2 * w + 2 * h
+print(perimeter)
+
+
+4. The circumference of a circle is 2πr where r is the radius of the circle. Write a Python statement that calculates and prints the circumference in inches of a circle whose radius is 8 inches. Assume that the constant π=3.14.
+r = 8
+pi = 3.14
+circumference = 2 * pi * r
+print(circumference)
+
+
+5. Given p dollars, the future value of this money when compounded yearly at a rate of r percent interest for y years is p(1+0.01r)y. Write a Python statement that calculates and prints the value of 1000 dollars compounded at 7 percent interest for 10 years.  
+p = 1000  #initial amount in dollars
+r = 7     #interest rate in percent
+y = 10    #number of years
+future_value = p * (1 + 0.01 * r) ** y
+print(future_value)
+
+
+6. Write a Python expression that combines the string “SDP Guruji is 27 years old." from the string “SDP Guruji" and the number 27 and then prints the result (Hint: Use the function str to convert the number into a string.)  
+name = "SDP Guruji"
+age = 27
+result = name + " " +str(age)
+print(result)
+
+
+7. Write a single Python statement that combines the three strings "My name is", “SDP" and “GURUJI" (plus a couple of other small strings) into one larger string "My name is SDP GURUJI." and prints the result.  
+print("My name is " + "SDP" + " " + "Guruji" + ".")
+
+
+8. The distance between two points (x0, y0) and (x1, y1) is (x0−x1)2+(y0−y1)2. Write a Python statement that calculates and prints the distance between the points (2,2) and (5,6).  
+import math
+
+x0,y0 = 2,2
+x1,y1 = 5,6
+distance = math.sqrt((x0 - x1)**2 + (y0 - y1)**2)
+print(distance)
+
