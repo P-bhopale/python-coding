@@ -1,0 +1,91 @@
+# Creation of list and changing value of any one element, also display the length of list.
+# creating a list
+my_list = [10,20,30,40,50]
+print(my_list)
+# changing the value of one element
+my_list[2] = "apple"
+
+# displaying the updated list and its length
+print("Updated list: ",my_list)
+print("Length of the list is: ", len(my_list))
+
+
+
+# Create a list and append two elements in it.
+# creating a list
+my_list = ["apple", "banana", "kiwi", "oranges", "mango"]
+# appending two elements to the list
+my_list.append("pears")
+my_list.append("chiku")
+# displaying the updated list
+print("upadated list:",my_list)
+
+
+
+# Create a list and sort it.
+# creating a list
+my_list = ["apple", "banana", "kiwi", "oranges", "mango", "chiku"]
+# sort the list
+my_list.sort()
+# displaying the updated list
+print("Updated list ",my_list)
+
+
+
+# Create a list of numbers and print sum of all the elements
+# Creating a list
+num_list = [15, 20, 50, 40, 60, 70]
+
+# Calculating the sum of all elements in the list
+total_sum = sum(num_list)
+
+# displaying the sum
+print("Sum of all elements:",total_sum)
+
+
+
+# Program to compare elements of list.
+# Creating a list
+num_list = [15, 20, 50, 40, 60, 70]
+
+# Comparing elements using comparison operators
+for i in range (len(num_list)-1):
+    if num_list[i] < num_list[i+1]:
+        print(f"{num_list[i]} is less than {num_list[i+1]}")
+    elif num_list[i] > num_list[i+1]:
+        print(f"{num_list[i]} is  greater than {num_list[i+1]}")
+    else:
+        print(f"{num_list[i]} is equal to {num_list[i+1]}")
+
+
+# Program to find maximum and minimum of list.
+# creating a list
+num_list = [15, 20, 50, 40, 60, 70]
+
+max_val = max(num_list)
+min_val = min(num_list)
+
+print("Maximum value: ",max_val)
+print("Minimum value: ",min_val)
+
+
+
+# Count the occurrence of element in list.
+# creating a list
+num_list = [15, 20, 70, 20, 60, 40, 70]
+element = 20
+count = num_list.count(element)
+print(f"The element {element} occurs {count} times in the list.")
+
+
+
+# Reverse a list.
+# creating a list
+num_list = [15, 20, 70, 20, 60, 40, 70]
+# Reversing the list in place
+num_list.reverse()
+# Displaying the reversed list
+print(num_list)
+
+
+
