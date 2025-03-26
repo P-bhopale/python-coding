@@ -1,0 +1,48 @@
+1. Method to calculate the area of the square
+#creating a tuple
+my_tuple = (8,15,25,20,2,60,9)
+
+# converting tuple to a list, sorting a list, and then converting it back to a tuple
+sorted_tuple = tuple(sorted(my_tuple))
+print(sorted_tuple)
+
+
+
+2. Create a tuple of numbers and print sum of all the elements
+#creating a tuple
+my_tuple = (8,15,25,20,2,60,9)
+total_sum =  sum(my_tuple)
+print("Sum of all elements in the tuple:", total_sum)
+
+
+
+3. Program to find maximum and minimum of tuple.
+#creating a tuple
+my_tuple = (8,15,25,20,2,60,9)
+#finding the max and min value
+max_val = max(my_tuple)
+min_val = min(my_tuple)
+#displaying the maximum and minimum value of tuple
+print("Maximum value in the tuple:", max_val)
+print("Minimum value in the tuple:", min_val)
+
+
+
+4. Count the occurrence of element in tuple in a specific range.
+#creating a tuple
+my_tuple = (1,2,4,5,2,8,15,25,20,2,60,9,5,2,6,9,3)
+
+start_index = 0
+end_index = len(my_tuple)
+
+subtuple = my_tuple[start_index:end_index]
+count = subtuple.count(2)
+
+print(f"The element 2 is occurs {count} times in a tuple.")
+
+
+
+5. Reverse a tuple.
+my_tuple = (8,15,25,20,2,60,9)
+reversed_tuple = my_tuple[::-1] 
+print("Reversed tuple:",reversed_tuple)
