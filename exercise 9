@@ -1,0 +1,49 @@
+1. Python program to find the power of a number using exponential operator available in python.
+base = int(input("Enter the base number: "))
+exponent = int(input("Enter the exponent: "))
+
+result = base ** exponent
+
+print(f"{base} raised to the power {exponent} is: {result}")
+
+
+
+2. Python program to check whether a given number is a Fibonacci number or not if it is Fibonacci then print “Great” otherwise oops, “it’s wrong”.
+
+
+
+
+
+
+3. Check whether the binary representation of a given number is a palindrome or not in if it is palindrome then print “YES, IT IS” otherwise print “NO”.
+# function to check if binary representation is a palindrome
+def is_binary_pallindrome(n):
+    # converting a number to binary excluding"0b"prefix
+    binary_represent = bin(n)[2:]
+
+    #check binary representation is equal to its reverse
+    return binary_represent == binary_represent[::-1]
+
+#Taking input from the user
+num = int(input("Enter the number: "))
+
+#checking if the binary representation is equal to its reverse
+if is_binary_pallindrome(num):
+    print("Yes, IT IS")
+else:
+    print("NO")
+
+
+
+
+4.Find the number of integers from 1 to N which contains digits Zeros(0’s).
+def count_num_with_zero(n):
+    count = 0
+    for i in range(1,n+1):
+        if '0' in str(i):
+            count += 1
+    return count
+
+n = int(input("Enter a number: "))
+result = count_num_with_zero(n)
+print(f"The number of integers from 1 to {n} that contain the digit 0 is: {result}")
