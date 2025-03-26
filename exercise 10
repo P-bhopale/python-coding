@@ -1,0 +1,131 @@
+1. Write a Program to create a class by name Students, and initialize attributes like name, age, and grade while creating an object.
+class Student:
+    def __init__(self,name,age,grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Grade: {self.grade}")
+
+student1 = Student("John", 12, "A")
+student1.display_info()
+
+
+
+2. Write a program, to create a child class Teacher that will inherit the properties of Parent class Staff.
+# Parent class staff 
+class Staff:
+     # Initialize attributes Staff)
+    def __init__(self, name, emp_id, position):
+        self.name = name
+        self.emp_id = emp_id
+        self.position = position
+        
+         # Method to display staff information
+    def display_staff_info(self):
+         print(f"Name: {self.name}")
+         print(f"Employee ID: {self.emp_id}")
+         print(f"Position: {self.position}")
+
+   # Child class Teacher that inherits from Staff
+class Teacher(Staff):
+    # Initialize attributes for Teacher (inheriting from Staff)
+    def __init__(self, name, emp_id, position, subject):
+        # Call the parent class constructor to initialize inherited attributes
+        super().__init__(name, emp_id, position)
+        self.subject = subject
+    
+    # Method to display teacher-specific information
+    def display_teacher_info(self):
+        # Display information from parent class (Staff)
+        super().display_staff_info()
+        # Display teacher-specific information
+        print(f"Subject: {self.subject}")  
+        
+# create an object of the child class(Teacher class)
+teacher1 = Teacher("John", "T1542", "Teacher", "English")
+teacher1.display_teacher_info()
+
+
+
+
+3. Write a Program, to create class and using the class instance print all the writable attributes of that object.
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        self.country = ""
+
+        print(f"Hello my name is {self.name} and I'm {self.age} years old")
+#creating instance object of class Person
+person_info = Person("Ram",12)
+
+#Adding a new writable attribute to the object
+person_info.wattr = "India"
+
+print("this is a writable attributes of object")
+for attribute in dir(person_info):
+    if not attribute.startswith("__"):
+        print(f"{attribute} : {getattr(person_info,attribute)}")
+
+
+
+
+4. Create a class Teacher with name, age, and salary attributes, where salary must be a private attribute that cannot be accessed outside the class
+class Teacher:
+    def __init__(self,name,age,salary):
+        self.name = name
+        self.age = age
+        self.__salary = salary
+
+    # Public method to access the private salary attribute
+    def get_salary(self):
+        return self.__salary
+        
+    # Public method to set or modify the private salary attribute
+    def set_salary(self,salary):
+        self.__salary = salary
+        
+    # Method to display teacher details
+    def display_teacher_info(self):
+        print(f"myself: {self.name},  age: {self.age},  salary: {self.get_salary()}")
+
+# Create an instance of Teacher class and calling display_teacher_info function
+teacher1 = Teacher("Ram",30,100000)
+teacher1.display_teacher_info()
+
+# update the salary via setter method
+print("Accessing salary via getter method:", teacher1.get_salary())
+teacher1.set_salary(500000)
+
+# Display updated teacher info
+teacher1.display_teacher_info()
+
+
+
+
+5.Write a Python class Square, and define two methods that return the square area and perimeter.
+
+class Square:
+    def __init__(self,side_length):
+        self.side_length = side_length
+   
+    # Method to calculate the area of the square
+    def area(self):
+        return self.side_length ** 2
+       
+    # Method to calculate the perimeter of the square
+    def perimeter(self):
+        return 4 * self.side_length 
+       
+    def display(self):
+        print(f"Area of square: {sq1.area()}")
+        print(f"Perimeter of the square: {sq1.perimeter()}")
+
+sq1 = Square(5)
+sq1.display()
+
+        
