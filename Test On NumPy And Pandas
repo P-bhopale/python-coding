@@ -1,0 +1,202 @@
+Q 1. Create Simple 1-D array and check type and check data types in array
+import numpy as np
+arr = np.array([1,2,3,4,5])
+array_type = type(arr)
+arr_data_type = arr.dtype
+
+print(f"Type of the array: {array_type}")
+print(f"Data type of the array elements: {arr_data_type}")
+
+
+Q 2. Create a null vector of size 10 but the fifth value which is 1
+import numpy as np
+vector = np.zeros(10)
+vector[5] = 1
+print(vector)
+
+
+Q3. Create a vector with values ranging from 10 to 49
+import numpy as np
+vector = np.arange(10,50)
+print(vector)
+
+
+Q4. Reverse a vector (first element becomes last)
+import numpy as np
+vector = np.arange(10,50)
+reverse_vector = vector[::-1]
+print(reverse_vector)
+
+
+Q5. Find indices of non-zero elements from [1,2,0,0,4,0]
+import numpy as np
+array = np.array([1,2,0,0,4,0])
+non_zero_indices = np.nonzero(array)
+print(non_zero_indices)
+
+
+Q6. Write a Pandas program to calculate the frequency counts of each unique value of a given series.
+import numpy as np
+import pandas as pd
+data = pd.Series([1,2,2,3,2,4,5,2,3,3,4,4,5,6])
+frequency_counts = data.value_counts()
+print(frequency_counts)
+
+
+Q7. Write a Pandas program to display most frequent value in a given series and replace everything else as 'Other' in the series.
+
+
+Q8. Write a Pandas program to get the items of a given series not present in another given series.
+import pandas as pd
+import numpy as np
+series1 = pd.Series([1,2,3,4,5,6])
+series2 = pd.Series([4,5,6,7])
+
+result = series1[~series1.isin(series2)]
+print(result)
+
+
+Q9. Write a Pandas program to create a subset of a given series based on value and condition
+import pandas as pd
+data = pd.Series([1,2,3,4,5,6,7,8,9])
+subset = data[data > 3]
+print(subset)
+
+
+Q10. Write a Pandas program to find the positions of numbers that are multiples of 5 of a given series.
+import numpy as np
+import pandas as pd
+
+data = pd.Series([10,20,12,40,50,47,70,68,90])
+positions = np.where(data % 5 == 0)
+print(positions)
+
+
+Q11. Write a Python program to plot several lines with different format styles in one command using array.
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+x = np.linspace(0,10,100)
+
+y1 = np.sin(x)
+y2 = np.cos(x)
+y3 = np.tan(x)
+
+plt.plot(x,y1, label = 'sin(x)')
+plt.plot(x,y2, label = 'cos(x)')
+plt.plot(x,y3, label = 'tan(x)')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Multiple Lines with Different Styles')
+
+plt.legend()
+
+plt.ylim(-10,10)
+plt.grid(True)
+plt.show()
+
+
+Q12. Write a Python programming to display a bar chart of the popularity of programming Languages.
+Sample data:
+Programming languages: Java, Python, PHP, JavaScript, C#, C++
+Popularity: 22.2, 17.6, 8.8, 8, 7.7, 6.7
+ans =>
+import matplotlib.pyplot as plt
+
+languages = ['Java','Python','PHP','JavaScript','C#','C++']
+popularity = [22.2,17.6,8.8,8.0,7.7,6.7]
+
+plt.bar(languages,popularity,color = 'skyblue')
+
+plt.xlabel("Programming Languages")
+plt.ylabel("Popularity (%)")
+plt.title("Popularity of programming Languages")
+
+plt.show()
+
+
+Q13 Write a Python program to create bar plot from a DataFrame.
+Sample Data Frame:
+a b c d e
+2 4,8,5,7,6
+4 2,3,4,2,6
+6 4,7,4,7,8
+8 2,6,4,8,6
+10 2,4,3,3,2
+ans =>
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'a': [2, 4, 6, 8, 10],
+    'b': [4, 2, 4, 2, 2],
+    'c': [8, 3, 7, 6, 4],
+    'd': [5, 4, 4, 4, 3],
+    'e': [7, 2, 7, 8, 3]
+}
+
+df = pd.DataFrame(data)
+
+df.plot(kind='bar',figsize=(10,6))
+
+plt.xlabel('Index')
+plt.ylabel('Values')
+plt.title('Bar Plot of Dataframe')
+
+plt.show()
+
+
+Q14. Write a Python programming to create a pie chart of the popularity of programming Languages.
+Sample data:
+Programming languages: Java, Python, PHP, JavaScript, C#, C++
+Popularity: 22.2, 17.6, 8.8, 8, 7.7, 6.7
+ans =>
+import matplotlib.pyplot as plt
+
+languages = ['Java','Python','PHP','JavaScript','C#','C++']
+popularity = [22.2,17.6,8.8,8.0,7.7,6.7]
+
+plt.pie(popularity,labels=languages,autopct='%1.1f%%',startangle=140)
+
+plt.title("Popularity of programming Languages")
+
+plt.axis('equal')
+
+plt.show()
+
+
+Q15. Write a Python program to draw a scatter plot with empty circles taking a random distribution in X and Y and plotted against each other.
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.random.rand(50)  
+y = np.random.rand(50)  
+
+plt.scatter(x, y, marker='o', edgecolor='blue', facecolor='none', s=100) 
+
+plt.xlabel('X Values')
+plt.ylabel('Y Values')
+plt.title('Scatter Plot with Empty Circles')
+
+plt.show()
+
+
+Q16. Write a Python program to draw a scatter plot comparing two subject marks of Mathematics and Science. Use marks of 10 students.
+Test Data: math_marks = [88, 92, 80, 89, 100, 80, 60, 100, 80, 34] science_marks = [35, 79, 79, 48, 100, 88, 32, 45, 20, 30] marks_range = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+ans=>
+import matplotlib.pyplot as plt
+
+math_marks = [88, 92, 80, 89, 100, 80, 60, 100, 80, 34]
+science_marks = [35, 79, 79, 48, 100, 88, 32, 45, 20, 30] 
+marks_range = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+plt.scatter(math_marks,science_marks,color='Blue')
+
+plt.xlabel('Mathematics Marks')
+plt.ylabel('Science Marks')
+plt.title('Scatter Plot of Mathematics vs Science Marks')
+
+plt.grid(True)
+plt.show()
